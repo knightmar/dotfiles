@@ -1,0 +1,74 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "spacing": 4,
+    
+    "modules-left": ["hyprland/workspaces", "custom/spacer", "cpu", "memory", "battery"],
+    
+    "modules-center": ["clock"],
+    "modules-right": ["tray","backlight", "hyprland/language","pulseaudio", "network" ,"custom/power"],
+
+    "hyprland/workspaces": {
+        "format": "{name}"
+    },
+    "clock": {
+        "format": "{:%H:%M  %d/%m/%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+"cpu": {
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": " {}%"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol"
+    },
+    "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰈀 Ethernet",
+    "format-linked": " ⚠ {ifname} (No IP)",
+    "format-disconnected": "⚠ Disconnected",
+    "tooltip-format-wifi": "  {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "󰈀  {ifname}",
+    "on-click": "kitty -e nmtui"
+},
+"custom/power": {
+    "format": "",
+    "on-click": "/home/knightmar/.config/waybar/scripts/powermenu.sh",
+    "tooltip": false
+},
+"custom/spacer": {
+    "format": " "
+},
+"hyprland/language": {
+    "format": "  {}",
+    "format-en": "🇺🇸",
+    "format-fr": "🇫🇷",
+    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+},
+"tray": {
+    "icon-size": 18,
+    "spacing": 10
+},
+"backlight": {
+    "device": "intel_backlight", 
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl set 5%-",
+    "min-length": 6
+}
+}
