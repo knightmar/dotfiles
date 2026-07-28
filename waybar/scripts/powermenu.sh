@@ -6,5 +6,5 @@ choice=$(echo -e " Eteindre\n Redemarrer\n Deconnexion" | wofi --dmenu 
 case "$choice" in
     " Eteindre") systemctl poweroff ;;
     " Redemarrer") systemctl reboot ;;
-    " Deconnexion") hyprctl dispatch exit ;;
+    " Deconnexion") pkill Hyprland ;;
 esac
