@@ -6,17 +6,16 @@ hl.on("hyprland.start", function()
 
         "waybar",
         "hyprpaper",
-
-        "systemctl --user start elephant.service",
-
         "awww-daemon",
-
         "walker --gapplication-service",
-
-    }
+        "elephant",
+        "systemctl --user start hyprpolkitagent",
+        "hyprctl dispatch workspace 1"
+      }
 
     for _, cmd in ipairs(startup) do
         hl.exec_cmd(cmd)
     end
+
 
 end)

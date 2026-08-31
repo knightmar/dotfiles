@@ -30,7 +30,7 @@ end
 exec("RETURN", apps.terminal)
 exec("E", apps.files)
 exec("B", apps.browser)
-exec("A", "nc -U /run/user/1000/walker/walker.sock")
+exec("A", "walker")
 exec("L", apps.locker)
 
 bind("SHIFT + Q", hl.dsp.window.close())
@@ -94,17 +94,17 @@ end
 -- Scratchpad
 --------------------------------------------------
 
-bind(
-    "S",
-    hl.dsp.workspace.toggle_special("magic")
-)
+--bind(
+--    "S",
+--    hl.dsp.workspace.toggle_special("magic")
+--)
 
-bind(
-    "SHIFT + S",
-    hl.dsp.window.move({
-        workspace = "special:magic",
-    })
-)
+--bind(
+--   "SHIFT + S",
+--    hl.dsp.window.move({
+--       workspace = "special:magic",
+--    })
+--)
 
 --------------------------------------------------
 -- Mouse
@@ -141,15 +141,9 @@ hl.bind(
 --------------------------------------------------
 
 hl.bind(
-    "Print",
-    hl.dsp.exec_cmd("grim - | wl-copy")
+    MOD .. "+ SHIFT + S",
+    hl.dsp.exec_cmd([[bash -c 'slurp | grim -g - - | wl-copy']])
 )
-
-hl.bind(
-    "SHIFT + Print",
-    hl.dsp.exec_cmd("slurp | grim -g - - | wl-copy")
-)
-
 --------------------------------------------------
 -- Audio
 --------------------------------------------------

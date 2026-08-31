@@ -7,7 +7,7 @@
 apps = {
     terminal = "kitty",
     files = "dolphin",
-    browser = "firefox",
+    browser = "zen-browser",
     launcher = "walker",
     locker = "hyprlock",
 }
@@ -65,7 +65,7 @@ hl.config({
     input = {
 
         kb_layout = "fr,us",
-        kb_options = "grp:alt_shift_toggle",
+        -- kb_options = "grp:alt_shift_toggle",
 	numlock_by_default = true, 
         follow_mouse = 1,
         sensitivity = 0,
@@ -97,7 +97,20 @@ hl.config({
     xwayland = {
         force_zero_scaling = true,
     },
+
 })
+
+--------------------------------------------------
+-- Workspaces
+--------------------------------------------------
+
+hl.workspace_rule({ 
+  workspace = "1",
+  monitor = "DP-2",
+  default = true
+})
+
+
 
 --------------------------------------------------
 -- Gestures
