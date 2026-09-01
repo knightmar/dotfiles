@@ -37,7 +37,7 @@ end
 
 ## Starship prompt
 if status --is-interactive
-   source ("/usr/bin/starship" init fish --print-full-init | psub)
+   source ("starship" init fish --print-full-init | psub)
 end
 
 ## Functions
@@ -160,6 +160,11 @@ alias jctl 'journalctl -p 3 -xb'
 
 # Recent installed packages
 alias rip 'expac --timefmt="%Y-%m-%d %T" "%l\t%n %v" | sort | tail -200 | nl'
+
+function cd --description 'Change directory and list contents'
+    builtin cd $argv; and ls
+end
+funcsave cd
 
 ## Run fastfetch if session is interactive
 if status --is-interactive && type -q fastfetch
