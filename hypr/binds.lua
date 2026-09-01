@@ -30,7 +30,7 @@ end
 exec("RETURN", apps.terminal)
 exec("E", apps.files)
 exec("B", apps.browser)
-exec("A", "walker")
+exec("A", "rofi -show drun")
 exec("L", apps.locker)
 
 bind("SHIFT + Q", hl.dsp.window.close())

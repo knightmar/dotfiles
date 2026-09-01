@@ -3,12 +3,8 @@
 hl.on("hyprland.start", function()
 
     local startup = {
-
         "waybar",
         "hyprpaper",
-        "awww-daemon",
-        "walker --gapplication-service",
-        "elephant",
         "systemctl --user start hyprpolkitagent",
         "hyprctl dispatch workspace 1"
       }
