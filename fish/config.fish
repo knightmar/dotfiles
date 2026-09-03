@@ -2,7 +2,7 @@
 # Hide welcome message & ensure we are reporting fish as shell
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
-set -x SHELL /usr/bin/fish
+set -x SHELL fish
 
 # Use bat for man pages
 set -xU MANPAGER "sh -c 'col -bx | bat -l man -p'"
@@ -161,10 +161,10 @@ alias jctl 'journalctl -p 3 -xb'
 # Recent installed packages
 alias rip 'expac --timefmt="%Y-%m-%d %T" "%l\t%n %v" | sort | tail -200 | nl'
 
-function cd --description 'Change directory and list contents'
-    builtin cd $argv; and ls
+function cd
+    builtin cd $argv
+    and ls
 end
-funcsave cd
 
 ## Run fastfetch if session is interactive
 if status --is-interactive && type -q fastfetch

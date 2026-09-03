@@ -25,16 +25,18 @@ MOD = "SUPER"
 hl.monitor({
     output = "DP-2",
     mode = "preferred",
-    position = "1920x0",
+    position = "auto-up", 
     scale = 1,
 })
+
 
 hl.monitor({
     output = "",
     mode = "preferred",
     position = "0x0",
-    scale = "auto",
+    scale = 1.25,
 })
+
 
 --------------------------------------------------
 -- Environment
@@ -65,8 +67,8 @@ hl.config({
     input = {
 
         kb_layout = "fr,us",
-        -- kb_options = "grp:alt_shift_toggle",
-	numlock_by_default = true, 
+        kb_options = "",
+        numlock_by_default = true, 
         follow_mouse = 1,
         sensitivity = 0,
 

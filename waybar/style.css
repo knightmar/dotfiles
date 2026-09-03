@@ -1,13 +1,12 @@
 * {
     font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 15px;
 }
 
-
 window#waybar {
-    background-color: #15173D; /* Votre bleu foncé */
-    color: #F1E9E9;           /* Votre blanc crème */
-    border-bottom: 2px solid #982598; /* Violet pour souligner */
+    background-color: #15173D; 
+    color: #F1E9E9;          
+    border-bottom: 2px solid #982598; 
 }
 
 #workspaces button {
@@ -21,35 +20,35 @@ window#waybar {
     color: #F1E9E9;
 }
 
-#clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #tray, #mode, #idle_inhibitor, #scratchpad #custom-power {
-    padding: 0 10px;
+
+
+#clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #tray, #mode, #idle_inhibitor, #scratchpad, #language, #custom-power {
+    padding: 2px 10px;
     color: #F1E9E9;
-    background: #252866; /* Un bleu légèrement plus clair pour le contraste */
-    margin: 7px 5px;
+    background: #252866;
+    margin: 4px 5px;
     border-radius: 8px;
 }
 
 #clock {
-    color: #E491C9; /* Rose pour l'horloge */
+    color: #E491C9; 
     font-weight: bold;
 }
 
 .modules-right > widget:last-child > #custom-power {
-    margin-right: 15px; /* Une marge fixe pour décoller du bord sans dépasser */
+    margin-right: 15px; 
 }
 
 #custom-spacer {
-    background: transparent; /* On cache le fond bleu pour ce module */
+    background: transparent; 
     margin: 0;
-    padding: 0;
-    /* Ajuste cette valeur (ex: 100px, 200px) pour pousser les modules vers le centre */
+    padding: 0; 
     min-width: 15px; 
 }
 
-
 #tray {
     padding: 0 10px;
-    margin: 7px 5px;
+    margin: 4px 5px;
     background: #252866;
     border-radius: 8px;
 }

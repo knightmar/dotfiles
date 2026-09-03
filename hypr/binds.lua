@@ -33,7 +33,7 @@ exec("B", apps.browser)
 exec("A", "rofi -show drun")
 exec("L", apps.locker)
 
-Rind("SHIFT + Q", hl.dsp.window.close())
+bind("SHIFT + Q", hl.dsp.window.close())
 bind("T", hl.dsp.window.float({ action = "toggle" }))
 bind("P", hl.dsp.window.pseudo())
 bind("J", hl.dsp.layout("togglesplit"))

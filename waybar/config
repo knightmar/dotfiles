@@ -47,7 +47,7 @@
 },
 "custom/power": {
     "format": "",
-    "on-click": "/home/knightmar/.config/waybar/scripts/powermenu.sh",
+    "on-click": "~/.config/waybar/scripts/powermenu.sh",
     "tooltip": false
 },
 "custom/spacer": {
@@ -57,7 +57,7 @@
     "format": "  {}",
     "format-en": "🇺🇸",
     "format-fr": "🇫🇷",
-    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+    "on-click": "hyprctl switchxkblayout all next"
 },
 "tray": {
     "icon-size": 18,
