@@ -55,7 +55,7 @@
 },
 "hyprland/language": {
     "format": "  {}",
-    "format-en": "🇺🇸",
+    "format-ko": "🇰🇷",
     "format-fr": "🇫🇷",
     "on-click": "hyprctl switchxkblayout all next"
 },
