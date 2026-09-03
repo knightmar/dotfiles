@@ -7,7 +7,8 @@ hl.on("hyprland.start", function()
         "hyprpaper",
         "systemctl --user start hyprpolkitagent",
         "hyprctl dispatch workspace 1",
-        "hypridle"
+        "hypridle",
+        "fcitx5"
       }
 
     for _, cmd in ipairs(startup) do
