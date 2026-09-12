@@ -110,6 +110,9 @@ alias lt 'eza -aT --color=always --group-directories-first --icons=auto' # tree 
 alias l. 'eza -ald --color=always --group-directories-first --icons=auto .*' # show only dotfiles
 
 
+abbr gcc 'gcc -Wall -Wextra -Werror -Wvla -pedantic -std=c99'
+abbr dgcc 'gcc -Wall -Wextra -Werror -Wvla -pedantic -std=c99 -g -fsanitize=address'
+
 # Replace some more things with better alternatives
 abbr cat 'bat --style header,snip,changes'
 if not test -x /usr/bin/yay; and test -x /usr/bin/paru

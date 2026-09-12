@@ -30,7 +30,7 @@ end
 exec("RETURN", apps.terminal)
 exec("E", apps.files)
 exec("B", apps.browser)
-exec("A", "rofi -show drun")
+exec("A", "wofi --show drun")
 exec("L", apps.locker)
 
 bind("SHIFT + Q", hl.dsp.window.close())
@@ -61,16 +61,16 @@ bind("down", hl.dsp.focus({ direction = "down" }))
 --------------------------------------------------
 
 local workspace_keys = {
-    "ampersand",
-    "eacute",
-    "quotedbl",
-    "apostrophe",
-    "parenleft",
-    "minus",
-    "egrave",
-    "underscore",
-    "ccedilla",
-    "agrave",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "0",
 }
 
 for ws, key in ipairs(workspace_keys) do
@@ -204,6 +204,11 @@ bind_locked(
 
 bind_locked(
     "XF86AudioPlay",
+    "playerctl play-pause"
+)
+
+bind_locked(
+    "Pause",
     "playerctl play-pause"
 )
 

@@ -1,5 +1,7 @@
 -- ~/.config/hypr/config.lua
 
+
+
 --------------------------------------------------
 -- Applications
 --------------------------------------------------
@@ -7,7 +9,7 @@
 apps = {
     terminal = "kitty",
     files = "dolphin",
-    browser = "zen-browser",
+    browser = "firefox",
     launcher = "walker",
     locker = "hyprlock",
 }
@@ -42,7 +44,7 @@ hl.monitor({
 -- Environment
 --------------------------------------------------
 
-hl.env("XCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_THEME","rose-pine-hyprcursor")
 hl.env("HYPRCURSOR_SIZE", "24")
 
 --------------------------------------------------
@@ -66,7 +68,7 @@ hl.config({
 
     input = {
 
-        kb_layout = "fr,kr",
+        kb_layout = "kr,fr",
         kb_options = "",
         numlock_by_default = true, 
         follow_mouse = 1,
