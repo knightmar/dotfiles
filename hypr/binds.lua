@@ -30,7 +30,7 @@ end
 exec("RETURN", apps.terminal)
 exec("E", apps.files)
 exec("B", apps.browser)
-exec("A", "wofi --show drun")
+exec("A", "pgrep -x wofi >/dev/null || wofi --show drun")
 exec("L", apps.locker)
 
 bind("SHIFT + Q", hl.dsp.window.close())
